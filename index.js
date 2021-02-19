@@ -8,3 +8,5 @@ mongoose.connect('mongodb+srv://project2:12345678910@pro2.ozmde.mongodb.net/myFi
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB Connected...'))
 .catch(err => console.log(err))
+
+app.listen(port, () => console.log(`Express app listening on port ${port}`))
