@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 5000
 
+const config = require('./config/key')
 
 const bodyParser = require('body-parser')
 const { User } = require('./models/user')
