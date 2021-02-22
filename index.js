@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 5000
 
+
 const bodyParser = require('body-parser')
 const { User } = require('./models/user')
 
@@ -11,7 +12,7 @@ app.use(bodyParser.json())
 
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://project2:12345678910@pro2.ozmde.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect(config.mongoURI, {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB Connected...'))
 .catch(err => console.log(err))
